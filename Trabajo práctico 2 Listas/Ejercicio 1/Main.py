@@ -1,3 +1,6 @@
+''' Desarrollar cada una de las siguientes funciones y escribir un programa que permita 
+verificar su funcionamiento imprimiendo la lista luego de invocar a cada función
+'''
 import Funciones as f
 
 def main():     

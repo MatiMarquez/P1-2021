@@ -1,8 +1,10 @@
+''' Los números de claves de dos cajas fuertes están intercalados dentro de un
+número entero llamado "Clave Maestra", cuya longitud se desconoce.
+'''
 import Funciones as f
 
 def main():
-    largo = int(input("Ingrese la cantidad de números que tendrá la Clave Maestra: "))
-    clave_maestra = f.generar_clave_maestra(largo)
+    clave_maestra = f.generar_clave_maestra()
     claves = f.descifrar_claves(clave_maestra)
     print(f"\nClave Maestra = {clave_maestra}\n")
     print(f"La clave 1 es: {claves[0]}\n")

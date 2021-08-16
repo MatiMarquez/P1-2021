@@ -13,6 +13,7 @@ def calcular_tarifa(viajes, precio):
         print("Ingresó una cantidad de viajes negativa o 0")        
     
 def ingresar_datos():
+    # Ingreso de los datos para calcular la tarifa
     cantidad_viajes = int(input("Ingrese la cantidad de pasajes: "))
     valor_hoy = float(input("Ingrese el valor del pasaje actual: "))
     calcular_tarifa(cantidad_viajes, valor_hoy)

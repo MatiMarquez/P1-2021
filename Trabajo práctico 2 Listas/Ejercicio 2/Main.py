@@ -1,3 +1,4 @@
+# Escribir tres funciones y combinarlas en un mismo programa
 import Funciones as f
 
 def main():
