@@ -2,18 +2,17 @@ import random
 
 def generar_clave_maestra():
     # Crea la Clave Maestra
-    clave_m = (random.randint(0,9999999999))
-    clave_maestra = str(clave_m)
-    return clave_maestra
+    clave = (random.randint(0,9999999999))
+    clave_m = str(clave)
+    return clave_m
 
 def descifrar_claves(clave_m):
     # Descifra las dos claves
-    clave_uno = ''
-    clave_dos = ''
-    pares = ['0', '2', '4', '6', '8']
-    for i in range(0, len(clave_m)):
-        if clave_m[i] in pares:
-            clave_dos += clave_m[i] 
+    clave_par = ''
+    clave_impar = ''
+    for i in range(len(clave_m)):
+        if (i + 1) % 2 == 0:
+            clave_par += clave_m[i]
         else:
-            clave_uno += clave_m[i]
-    return clave_uno, clave_dos
+            clave_impar += clave_m[i]
+    return clave_par, clave_impar
