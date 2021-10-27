@@ -41,3 +41,31 @@ def ordenar_vector_ascendente(vector):
                 vector[i] = vector[i + 1]
                 vector[i + 1] = aux
     return vector
+
+def generar_archivo(nombre_archivo):
+    ruleta = 'ABCD'
+    with open (nombre_archivo, 'w', encoding='utf-8') as archivo:
+        for i in range(1000):
+            for i in ruleta:
+                numero = random.randint(0, 36)
+                archivo.write(f'{i},{numero}\n')
+        
+def leer_archivo(nombre_archivo):
+    lista_jugadas = []
+    try:
+        with open(nombre_archivo, 'r',encoding='utf-8') as arch:
+            for linea in arch:
+                campos = linea[-1].split(',')
+                j = Jugada(campos[0], int(campos[1]))
+                lista_jugadas.append(j)
+        return lista_jugadas
+    except:
+        print("No se pudo abrir el archivo")
+    
+def main():
+    nombre_archivo = 'ruleta.csv'
+    generar_archivo(nombre_archivo)
+    lineas_archivo = leer_archivo(nombre_archivo)
+
+if __name__ == '__main__':
+    main()
